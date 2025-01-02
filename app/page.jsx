@@ -4,6 +4,7 @@ import { RandomQuote } from 'components/random-quote';
 import { Markdown } from 'components/markdown';
 import { ContextAlert } from 'components/context-alert';
 import { getNetlifyContext } from 'utils';
+import Chat from 'components/chat';
 
 const cards = [
     //{ text: 'Hello', linkText: 'someLink', href: '/' }
@@ -53,6 +54,10 @@ export default function Page() {
                 <Markdown content={postDynamicContentExplainer} />
             </section>
             {/* !!cards?.length && <CardsGrid cards={cards} /> */}
+            <section className="flex flex-col gap-4">
+                <h2 className="text-2xl font-bold">AI 聊天助手</h2>
+                <Chat />
+            </section>
         </main>
     );
 }
